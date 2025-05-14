@@ -1,3 +1,11 @@
 day = 1
-phase = "tutorial"
+phase = 0 # 0 = tutorial; 1 = morning; 2 = afternoon; 3 = night
 player_name = "Your Eminence"
+
+city_grounds = [
+    [[], [], [], [], []], 
+    [[], [], [], [], []], 
+    [[], [], [], [], []], 
+    [[], [], [], [], []], 
+    [[], [], [], [], []]
+    ]

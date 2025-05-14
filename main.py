@@ -4,9 +4,8 @@ from tutorial import *
 
 def main():
     global phase
-    if phase == "tutorial":
-        init_factions()
-        show_faction_stats()
+    if phase == 0:
+        tutorial()
 
 if __name__ == "__main__":
     main()
