@@ -13,4 +13,25 @@ class Decision():
         self.option_2_effects = option_2_effects
     
     def option_1(self):
-        pass
+        if self.immediate == True:
+            for effect in self.option_1_effects:
+                if effect[1] == "favor":
+                    faction_dict[effect[0]].modify_favor(effect[2])
+                elif effect[1] == "suspicion":
+                    faction_dict[effect[0]].modify_suspicion(effect[2])
+                elif effect[1] == "presence":
+                    faction_dict[effect[0]].modify_presence(effect[2])
+        elif self.immediate == False:
+            pass # I have no idea genuinely
+    
+    def option_2(self):
+        if self.immediate == True:
+            for effect in self.option_2_effects:
+                if effect[1] == "favor":
+                    faction_dict[effect[0]].modify_favor(effect[2])
+                elif effect[1] == "suspicion":
+                    faction_dict[effect[0]].modify_suspicion(effect[2])
+                elif effect[1] == "presence":
+                    faction_dict[effect[0]].modify_presence(effect[2])
+        elif self.immediate == False:
+            pass
