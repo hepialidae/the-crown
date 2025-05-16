@@ -1,6 +1,6 @@
 from names import *
 
-faction_list = []
+faction_dict = {}
 
 class Faction():
     def __init__(self, name):
@@ -23,13 +23,6 @@ class Iron_Guard(Faction):
     def modify_presence(self, modifier):
         self.precense += modifier
 
-def init_factions():
-    global faction_list, faction_names
-    names = ["The Arcanum", "The Veiled", "The Gilded", "The Commoners"]
-    for name in faction_names:
-        faction_list.append(Faction(name))
-    faction_list.append(Iron_Guard())
-
 def show_faction_stats():
     global faction_list
     for faction in faction_list:
@@ -39,3 +32,9 @@ def show_faction_stats():
         else:
             print(f"Favor: {faction.favor}")
         print(f"Suspicion: {faction.suspicion}\n")
+
+# initialize factions
+for name in faction_names:
+    faction_dict[name] = Faction(name)
+faction_dict["The Iron Guard"] = Iron_Guard()
+print(faction_dict)

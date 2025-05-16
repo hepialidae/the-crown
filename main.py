@@ -1,6 +1,7 @@
 from factions import *
 from gamestate_tracking import *
 from tutorial import *
+from names import *
 
 def main():
     global phase
