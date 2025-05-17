@@ -21,20 +21,9 @@ class Iron_Guard(Faction):
         self.presence = 30
     
     def modify_presence(self, modifier):
-        self.precense += modifier
-
-def show_faction_stats():
-    global faction_list
-    for faction in faction_list:
-        print(f"{faction.name}:")
-        if faction.name == "The Iron Guard":
-            print(f"Military Presence: {faction.presence}")
-        else:
-            print(f"Favor: {faction.favor}")
-        print(f"Suspicion: {faction.suspicion}\n")
+        self.presence += modifier
 
 # initialize factions
 for name in faction_names:
     faction_dict[name] = Faction(name)
 faction_dict["The Iron Guard"] = Iron_Guard()
-print(faction_dict)

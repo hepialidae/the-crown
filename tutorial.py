@@ -1,4 +1,4 @@
-from gamestate_tracking import *
+import gamestate_tracking
 import time
 from names import *
 
@@ -6,7 +6,7 @@ def sleep(secs=1.2):
     time.sleep(secs)
 
 def tutorial():
-    global player_name, secretary_name, phase
+    global secretary_name, secretary_title
     print("Secretary: Welcome, Emanator!")
     sleep()
     print("Secretary: It's been a while since the Aether left. Now, it's up to you to rule.")
@@ -14,24 +14,24 @@ def tutorial():
     new_name = input("Secretary: What shall you be known as? ")
     try:
         if new_name[0] != None:
-            player_name = new_name
+            gamestate_tracking.player_name = new_name
     except IndexError:
-        player_name = player_name
+        gamestate_tracking.player_name = gamestate_tracking.player_name
     sleep(0.3)
-    print(f"{secretary_title}: Hello, {player_name}. I am {secretary_name}. It is an honor to work as your secretary.\n")
+    print(f"{secretary_title}: Hello, {gamestate_tracking.player_name}. I am {secretary_name}. It is an honor to work as your secretary.\n")
     sleep()
     print(f"{secretary_title}: This game has 3 phases: Morning, Afternoon, and Night.")
     sleep()
     decided = False
     while decided == False:
         tutorial_decision = input(f"{secretary_title}: Would you like me to explain them? Enter 'Yes' if you do, and 'No' if not. ")
-        if tutorial_decision == "No" or tutorial_decision == "no":
+        if tutorial_decision.lower() == "no":
             decided = True
             print("\n")
             sleep(0.3)
-            phase = 1
+            gamestate_tracking.phase = 1
             return None
-        elif tutorial_decision == "Yes" or tutorial_decision == "yes":
+        elif tutorial_decision.lower() == "yes":
             decided = True # then moves on to what's below the while loop
         else:
             decided = False
@@ -55,6 +55,6 @@ def tutorial():
     sleep()
     input(f"{secretary_title}: Press any button when you're ready to proceed.")
     sleep()
-    phase = 1
+    gamestate_tracking.phase = 1
     print("\n")
     return None

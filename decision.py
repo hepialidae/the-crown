@@ -1,5 +1,6 @@
 from decision_names import *
 from factions import *
+from faction_stats import *
 
 class Decision():
     # text is what is shown to the player
@@ -21,6 +22,7 @@ class Decision():
                     faction_dict[effect[0]].modify_suspicion(effect[2])
                 elif effect[1] == "presence":
                     faction_dict[effect[0]].modify_presence(effect[2])
+            update_stats()
         elif self.immediate == False:
             pass # I have no idea genuinely
     
@@ -33,5 +35,6 @@ class Decision():
                     faction_dict[effect[0]].modify_suspicion(effect[2])
                 elif effect[1] == "presence":
                     faction_dict[effect[0]].modify_presence(effect[2])
+            update_stats()
         elif self.immediate == False:
             pass
