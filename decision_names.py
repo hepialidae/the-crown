@@ -12,10 +12,10 @@ decision_names = [
         ]
     ],
     [
-        "The Commander of the Iron Guard requests more military bases around the city.\nOption A +10 favor to Iron Guard and +5 suspicion to all other factions; Option B -10 favor to Iron Guard.",
+        "The Commander of the Iron Guard requests more military bases around the city.\nOption A +10 presence to Iron Guard and +5 suspicion to all other factions; Option B -10 favor to Iron Guard.",
         True,
         [
-            ["The Iron Guard", "favor", 10], 
+            ["The Iron Guard", "presence", 10], 
             ["The Arcanum", "suspicion", 5], 
             ["The Veiled", "suspicion", 5], 
             ["The Gilded", "suspicion", 5], 

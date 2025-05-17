@@ -22,9 +22,10 @@ class Decision():
                     faction_dict[effect[0]].modify_suspicion(effect[2])
                 elif effect[1] == "presence":
                     faction_dict[effect[0]].modify_presence(effect[2])
-            update_stats()
         elif self.immediate == False:
             pass # I have no idea genuinely
+        update_stats()
+        return None
     
     def option_2(self):
         if self.immediate == True:
@@ -35,6 +36,7 @@ class Decision():
                     faction_dict[effect[0]].modify_suspicion(effect[2])
                 elif effect[1] == "presence":
                     faction_dict[effect[0]].modify_presence(effect[2])
-            update_stats()
         elif self.immediate == False:
             pass
+        update_stats()
+        return None
