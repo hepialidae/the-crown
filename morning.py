@@ -2,7 +2,7 @@ from tutorial import sleep
 from decision import *
 from factions import *
 import gamestate_tracking
-from names import *
+from may_change import *
 from decision_names import *
 import random as rand
 from faction_stats import create_stats_window

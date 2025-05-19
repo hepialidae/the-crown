@@ -1,10 +1,15 @@
 import sys
+from grid import *
+from building import *
+from factions import *
+from may_change import *
 import gamestate_tracking
 from tutorial import tutorial
 from morning import init_morning
 from endings import check_endings
 
 def main():
+    # core gameplay loop
     while True:
         if gamestate_tracking.phase == 0:
             tutorial()
