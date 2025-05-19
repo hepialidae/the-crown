@@ -13,15 +13,13 @@ def morning():
     sleep()
     print(f"{secretary_title}: It is now day {gamestate_tracking.day} of your reign.")
     sleep()
-    # requests = rand.randint(2, 5)
-    requests = 5
+    requests = rand.randint(2, 5)
     print(f"{secretary_title}: You have {requests} requests to review this morning.\n")
     sleep()
     for i in range(requests):
         print(f"{secretary_title}: Here is request number {i + 1}.")
         sleep()
-        # decision_num = rand.randint(0, len(decision_names) - 1)
-        decision_num = rand.randint(2, 3)
+        decision_num = rand.randint(0, len(decision_names) - 1)
         decision = Decision(decision_names[decision_num][0], decision_names[decision_num][1], decision_names[decision_num][2], decision_names[decision_num][3])
         appropriate_choice = False
         while appropriate_choice == False:
