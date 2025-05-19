@@ -3,7 +3,7 @@ from grid import *
 from factions import *
 
 class Building():
-    def __init__(self, name, faction, cost, interaction1=None, interaction2=None):
+    def __init__(self, name, faction, cost):
         self.name = name
         self.faction = faction
         self.cost = cost
