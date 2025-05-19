@@ -21,7 +21,7 @@ decision_names = [
             ["The Commoners", "suspicion", 5]
         ],
         [
-            ["The Iron Guard", "favor", -10]
+            ["The Iron Guard", "suspicion", 5]
         ]
     ],
     [
@@ -34,6 +34,17 @@ decision_names = [
         [
             ["The Gilded", "favor", -10], 
             ["The Commoners", "favor", 10]
+        ]
+    ],
+    [
+        "The Commoners want to build shelters for the homeless in place of a new military base.\nOption A +10 favor to Commoners and -10 presence to Iron Guard; Option B -10 favor to Commoners.",
+        True,
+        [
+            ["The Commoners", "favor", 10], 
+            ["The Iron Guard", "presence", -10]
+        ],
+        [
+            ["The Commoners", "favor", -10]
         ]
     ]
 ]
