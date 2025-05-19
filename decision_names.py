@@ -7,8 +7,7 @@ decision_names = [
             ["The Veiled", "favor", -10]
         ],
         [
-            ["The Arcanum", "favor", -10], 
-            ["The Veiled", "favor", 10]
+            ["The Arcanum", "favor", -10] 
         ]
     ],
     [
@@ -26,7 +25,7 @@ decision_names = [
         ]
     ],
     [
-        "A merchant from the Gilded wants to screw over Commoners.\nOption A +10 favor to Gilded and -10 favor to Commoners; Option B -10 favor to Gilded.",
+        "A merchant from the Gilded wants to screw over Commoners.\nOption A +10 favor to Gilded and -10 favor to Commoners; Option B -10 favor to Gilded and +10 favor to Commoners.",
         True,
         [
             ["The Gilded", "favor", 10], 
