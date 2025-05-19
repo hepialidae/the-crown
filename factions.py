@@ -1,4 +1,4 @@
-from may_change import faction_names
+from may_change import *
 
 faction_dict = {}
 
