@@ -8,7 +8,7 @@ class Grid():
         self.position = (row, column)
         self.building = building
         if building is None:
-            self.text = " "
+            self.text = "o"
         else:
             self.text = "x"
     
@@ -21,3 +21,15 @@ class Grid():
 for row in range(len(gamestate_tracking.city_grounds)):
     for column in range(len(gamestate_tracking.city_grounds[row])):
         gamestate_tracking.city_grounds[row][column] = Grid(row, column)
+
+def show_city_grounds():
+    for row in gamestate_tracking.city_grounds:
+        row_display = []
+        for i in range(len(row)):
+            if i == 0:
+                row_display.append(f"[{row[i].text}")
+            elif i == len(row) - 1:
+                row_display.append(f"{row[i].text}]")
+            else:
+                row_display.append(f"{row[i].text}")
+        print("], [".join(row_display))

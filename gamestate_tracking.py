@@ -10,11 +10,11 @@ treasury = {
 # x represents a building, while " " represents empty space.
 # At the beginning of the game, (2, 2) contains the palace.
 city_grounds = [
-    [[" "], [" "], [" "], [" "], [" "]], 
-    [[" "], [" "], [" "], [" "], [" "]], 
-    [[" "], [" "], ["x"], [" "], [" "]], 
-    [[" "], [" "], [" "], [" "], [" "]], 
-    [[" "], [" "], [" "], [" "], [" "]]
+    ["o", "o", "o", "o", "o"], 
+    ["o", "o", "o", "o", "o"], 
+    ["o", "o", "x", "o", "o"], 
+    ["o", "o", "o", "o", "o"], 
+    ["o", "o", "o", "o", "o"], 
     ]
 
 #      0      1      2      3     4
