@@ -37,5 +37,3 @@ def show_city_grounds():
         grids = "] [".join(texts)
         row_display.append(grids)
         print(f"{''.join(row_display)}")
-
-show_city_grounds()
