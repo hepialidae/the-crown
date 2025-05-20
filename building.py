@@ -11,15 +11,13 @@ class Building():
         self.faction = faction
         self.cost = cost
         self.built = False
-        building_dict[name] = self
+        building_dict[id] = self
 
     def build(self, row, column):
         self.built = True
         self.row = row
         self.column = column
         self.position = (row, column)
-        gamestate_tracking.city_grounds[row][column].remove(" ")
-        gamestate_tracking.city_grounds[row][column].append("x")
         gamestate_tracking.city_grounds[row][column].hold_building(self)
 
 # buildings
@@ -43,3 +41,23 @@ class HolySpring(Building):
     
     def worship(self):
         faction_dict["The Veiled"].modify_favor(10)
+
+def find_buildable_buildings():
+    buildable_buildings = []
+    for building in building_dict.values():
+        if not building.built:
+            buildable_buildings.append(building.name)
+    return ", ".join(buildable_buildings)
+
+# init code
+def init_buildings():
+    palace = Palace()
+    palace.build(2, 2)
+
+    MagicLibrary()
+
+    HolySpring()
+
+    return None
+
+init_buildings()

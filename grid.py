@@ -23,13 +23,19 @@ for row in range(len(gamestate_tracking.city_grounds)):
         gamestate_tracking.city_grounds[row][column] = Grid(row, column)
 
 def show_city_grounds():
-    for row in gamestate_tracking.city_grounds:
-        row_display = []
-        for i in range(len(row)):
-            if i == 0:
-                row_display.append(f"[{row[i].text}")
-            elif i == len(row) - 1:
-                row_display.append(f"{row[i].text}]")
+    print("   0   1   2   3   4")
+    for row in range(len(gamestate_tracking.city_grounds)):
+        row_display = [f"{row} "]
+        texts = []
+        for column in range(len(gamestate_tracking.city_grounds[row])):
+            if column == 0:
+                texts.append(f"[{gamestate_tracking.city_grounds[row][column].text}")
+            elif column == len(gamestate_tracking.city_grounds[row]) - 1:
+                texts.append(f"{gamestate_tracking.city_grounds[row][column].text}]")
             else:
-                row_display.append(f"{row[i].text}")
-        print("], [".join(row_display))
+                texts.append(f"{gamestate_tracking.city_grounds[row][column].text}")
+        grids = "] [".join(texts)
+        row_display.append(grids)
+        print(f"{''.join(row_display)}")
+
+show_city_grounds()

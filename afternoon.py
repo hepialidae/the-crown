@@ -24,7 +24,38 @@ def afternoon():
         sleep(0.5)
         choice = input(f"{secretary_title}: What would you like to do? ").lower().strip()
         if choice == "1":
-            print(gamestate_tracking.city_grounds)
+            print(f"\n{secretary_title}: Here's what your city looks like:\n")
+            show_city_grounds()
+            sleep()
+            buildable = find_buildable_buildings()
+            print(f"\n{secretary_title}: You can build the following buildings: {buildable}.")
+            lower_buildable = buildable.lower()
+            building_choice = None
+            while building_choice == None or building_choice not in lower_buildable:
+                building_choice = input(f"{secretary_title}: Which building would you like to build? ").lower().strip()
+                if building_choice not in lower_buildable:
+                    print(f"\n{secretary_title}: You can only build the following buildings: {buildable}.")
+                    sleep()
+            appropriate_choice = False
+            while appropriate_choice == False:
+                print(f"\n{secretary_title}: Where would you like to build the new building?")
+                sleep(0.5)
+                position_choice = input(f"{secretary_title}: Enter the coordinates in the format 'row, column': ").strip()
+                try:
+                    coords = list(map(int, position_choice.split(", ")))
+                    row = coords[0]
+                    column = coords[1]
+                    if gamestate_tracking.city_grounds[row][column].building != None:
+                        print(f"\n{secretary_title}: There is already a building there.")
+                        sleep()
+                        appropriate_choice = False
+                    else:
+                        building_dict[building_choice].build(row, column)
+                        appropriate_choice = True
+                        print(f"\n{secretary_title} Here's what your city looks like now:")
+                        print(show_city_grounds())
+                except ValueError:
+                    print(f"n\{secretary_title}: Please make sure the coordinates entered are in the right format.")
         elif choice == "2":
             pass
         elif choice == "3":
