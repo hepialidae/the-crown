@@ -115,5 +115,3 @@ def afternoon():
     sleep()
     gamestate_tracking.phase = 3
     return None
-
-afternoon()

@@ -2,6 +2,7 @@ import sys
 from grid import *
 from building import *
 from factions import *
+from afternoon import *
 from may_change import *
 import gamestate_tracking
 from tutorial import tutorial
@@ -17,7 +18,8 @@ def main():
             init_morning()
             check_endings()
         elif gamestate_tracking.phase == 2:
-            pass # not implemented yet
+            afternoon()
+            check_endings()
         elif gamestate_tracking.phase == 3:
             gamestate_tracking.phase = 1 # not implemented yet
         elif gamestate_tracking.phase == 4:
