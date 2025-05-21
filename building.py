@@ -44,15 +44,17 @@ class MagicLibrary(Building):
             gamestate_tracking.treasury["currency"] -= amount
         else:
             raise Exception("Amount must be more than 0.") # remember to try-except this
+        faction_dict["The Arcanum"].modify_favor(10)
     
     def interaction1(self):
         while True:
             donation_amount = int(input(f"\n{secretary_title}: How much would you like to donate? Enter the number of coins: "))
             try:
                 self.donate_to(donation_amount)
+                print(f"{secretary_title}: Your donation pleases the Arcanum.")
+                return None
             except Exception:
                 print(f"\n{secretary_title}: Please enter a number above 0.")
-        print(f"{secretary_title}: Your donation pleases the Arcanum.")
 
 class HolySpring(Building):
     def __init__(self):
