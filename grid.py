@@ -1,5 +1,4 @@
 import gamestate_tracking
-import factions
 
 class Grid():
     def __init__(self, row, column, building=None):
