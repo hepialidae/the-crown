@@ -13,18 +13,17 @@ def afternoon():
     print(f"{secretary_title}: You have {gamestate_tracking.treasury['currency']} coins.")
     sleep()
     choice = None
-    print(f"\n{secretary_title}: Enter '1' to build a building.")
-    sleep(0.5)
-    print(f"{secretary_title}: Enter '2' to interact with a building on the grid.")
-    sleep(0.5)
-    print(f"{secretary_title}: Enter '3' to check your treasury.")
-    sleep(0.5)
-    print(f"{secretary_title}: Enter '4' to view your city.")
-    sleep(0.5)
-    print(f"{secretary_title}: Enter 'Exit' to exit this phase.")
-    sleep(0.5)
-    choice = None
     while choice != "exit":
+        print(f"\n{secretary_title}: Enter '1' to build a building.")
+        sleep(0.5)
+        print(f"{secretary_title}: Enter '2' to interact with a building on the grid.")
+        sleep(0.5)
+        print(f"{secretary_title}: Enter '3' to check your treasury.")
+        sleep(0.5)
+        print(f"{secretary_title}: Enter '4' to view your city.")
+        sleep(0.5)
+        print(f"{secretary_title}: Enter 'Exit' to exit this phase.")
+        sleep(0.5)
         choice = input(f"{secretary_title}: What would you like to do? ").lower().strip()
         if choice == "1":
             print(f"\n{secretary_title}: Here's what your city looks like:\n")
