@@ -12,3 +12,4 @@ def check_endings():
         print("<They riot, and the Iron Guard is unable to stop them.>")
         sleep()
         print("<The city is in chaos, and you are executed by the mob.>\n")
+    
