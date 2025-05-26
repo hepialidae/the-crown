@@ -1,10 +1,10 @@
-from tutorial import sleep
+import random as rand
 from decision import *
 from factions import *
-import gamestate_tracking
 from may_change import *
+import gamestate_tracking
+from tutorial import sleep
 from decision_names import *
-import random as rand
 from faction_stats import create_stats_window
 
 def morning():

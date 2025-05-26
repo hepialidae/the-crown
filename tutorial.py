@@ -1,6 +1,6 @@
-import gamestate_tracking
 import time
 from may_change import *
+import gamestate_tracking
 
 def sleep(secs=1.2):
     time.sleep(secs)

@@ -1,6 +1,6 @@
-from decision_names import *
 from factions import *
 from faction_stats import *
+from decision_names import *
 
 class Decision():
     # text is what is shown to the player
