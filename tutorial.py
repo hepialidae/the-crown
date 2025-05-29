@@ -20,6 +20,18 @@ def tutorial():
     sleep(0.3)
     print(f"{secretary_title}: Hello, {gamestate_tracking.player_name}. I am {secretary_name}. It is an honor to work as your secretary.\n")
     sleep()
+    new_city = input(f"{secretary_title}: What do you want to name your city? ")
+    try:
+        if new_city[0] != None:
+            new_city_words = new_city.split(" ")
+            capitalized_city_words = []
+            for word in new_city_words:
+                capitalized_city_words.append(word.capitalize())
+            gamestate_tracking.city_name = " ".join(capitalized_city_words)
+    except IndexError:
+        gamestate_tracking.city_name = gamestate_tracking.city_name
+    print(f"{secretary_title}: {gamestate_tracking.city_name}, huh? Quite memorable, indeed.\n")
+    sleep()
     print(f"{secretary_title}: This game has 3 phases: Morning, Afternoon, and Night.")
     sleep()
     decided = False
@@ -43,7 +55,9 @@ def tutorial():
     sleep()
     print(f"{secretary_title}: You implement policies in the Afternoon phase, when you can build.")
     sleep()
-    print(f"{secretary_title}: At Night, you can go to the tavern to see what people think of you.\n")
+    print(f"{secretary_title}: At Night, you will be shown the newspaper stories that will be released tomorrow.")
+    sleep()
+    print(f"{secretary_title}: You can choose to edit or delete existing stories, and add new ones.\n")
     sleep(5)
     print(f"\n{secretary_title}: This game has 5 factions, each representing a different element.")
     sleep()
