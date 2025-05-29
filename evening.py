@@ -6,3 +6,7 @@ def evening():
     print(f"\n{secretary_title}: Good evening, {gamestate_tracking.player_name}.")
     sleep()
     print(f"{secretary_title}: {gamestate_tracking.newspaper_outlet} has sent over their newspaper for you to review.")
+
+
+    gamestate_tracking.phase = 1
+    return None

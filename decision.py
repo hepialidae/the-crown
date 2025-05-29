@@ -8,7 +8,6 @@ class Decision():
     # effects must be lists containing tuples describing the effect: (faction_name, stat, modifier)
     def __init__(self, text, immediate, option_1_effects, option_2_effects):
         self.text = text
-        self.mods = 0
         self.immediate = immediate
         self.option_1_effects = option_1_effects
         self.option_2_effects = option_2_effects

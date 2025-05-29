@@ -6,6 +6,7 @@ newspaper_outlet = f"The {city_name} Times"
 treasury = {
     "currency": 0
 }
+actions_today = []
 
 # THIS IS A GRID. USING THE COORD SYSTEM. (0, 0) is the top left corner, while (4, 4) is the bottom right corner.
 # The first index is the y-coordinate, while the second index is the left coordinate.

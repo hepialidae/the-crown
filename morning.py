@@ -13,7 +13,7 @@ def morning():
     sleep()
     print(f"{secretary_title}: It is now day {gamestate_tracking.day} of your reign.")
     sleep()
-    requests = rand.randint(2, 5)
+    requests = rand.randint(3, 7)
     print(f"{secretary_title}: You have {requests} requests to review this morning.\n")
     sleep()
     for i in range(requests):

@@ -1,6 +1,13 @@
 from may_change import *
 
 faction_dict = {}
+faction_opps = {
+    "The Arcanum": "The Veiled",
+    "The Veiled": "The Arcanum",
+    "The Commoners": "The Gilded",
+    "The Gilded": "The Commoners",
+    "The Iron Guard": None
+}
 
 class Faction():
     def __init__(self, name):
