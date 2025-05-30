@@ -1,6 +1,7 @@
 from factions import *
 import gamestate_tracking
 from decision_names import *
+from newspaper import *
 
 class Decision():
     # text is what is shown to the player

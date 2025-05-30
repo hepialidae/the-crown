@@ -1,3 +1,4 @@
+import random
 import gamestate_tracking
 from tutorial import sleep
 from article import ActionArticle, SillyArticle, StateOfTheCityArticle
@@ -31,3 +32,12 @@ class Newspaper():
         article = StateOfTheCityArticle(gamestate_tracking.day)
         article.write()
         self.add_article(article, "state of the city")
+    
+    def print_newspaper(self):
+        for i in range(3):
+            article = random.choice(self.action_articles)
+            self.action_articles.remove(article)
+            self.final_articles.append(article)
+        print("CONTENTS: ")
+        for j in range(len(self.final_articles)):
+            print(f"{j + 1}. {self.final_articles[j].headline}")

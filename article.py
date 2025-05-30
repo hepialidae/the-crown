@@ -44,14 +44,14 @@ class ActionArticle(Article):
                 self.headline = random.choice(headlines)
             elif self.define_impact() == "negative":
                 headlines = [
-                    f"The {self.action_id} is an insult to {self.stance}!"
+                    f"The {self.action_id} is an insult to {self.stance}!",
                     f"{self.stance} condemns the {self.action_id}"
                 ]
                 self.headline = random.choice(headlines)
         elif self.stance == faction_opps[self.faction]: # author belongs to opposite faction
             if self.define_impact() == "positive":
                 headlines = [
-                    f"The {self.action_id} is an insult to {self.stance}!"
+                    f"The {self.action_id} is an insult to {self.stance}!",
                     f"{self.stance} condemns the {self.action_id}"
                 ]
                 self.headline = random.choice(headlines)
