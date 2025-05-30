@@ -1,4 +1,4 @@
-from may_change import *
+from may_change import faction_names, military_faction_name
 
 faction_dict = {}
 faction_opps = {
@@ -33,4 +33,14 @@ class IronGuard(Faction):
 # initialize factions
 for name in faction_names:
     faction_dict[name] = Faction(name)
-faction_dict["The Iron Guard"] = IronGuard()
+faction_dict[military_faction_name] = IronGuard()
+
+def show_faction_stats():
+    print("\n")
+    for i in faction_names:
+        print(f"{faction_dict[i].name}:")
+        print(f"Favor: {faction_dict[i].favor}")
+        print(f"Suspicion: {faction_dict[i].suspicion}\n")
+    print(f"{military_faction_name}:")
+    print(f"Presence: {faction_dict[military_faction_name].presence}")
+    print(f"Suspicion: {faction_dict[military_faction_name].suspicion}\n")

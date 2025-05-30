@@ -8,7 +8,8 @@ decision_names = [
         ],
         [
             ["The Arcanum", "favor", -10] 
-        ]
+        ],
+        "battle magic research permit"
     ],
     [
         "The Commander of the Iron Guard requests more military bases around the city.\nOption A +10 presence to Iron Guard and +5 suspicion to all other factions; Option B -10 favor to Iron Guard.",
@@ -22,7 +23,8 @@ decision_names = [
         ],
         [
             ["The Iron Guard", "suspicion", 5]
-        ]
+        ],
+        "military bases"
     ],
     [
         "A merchant from the Gilded wants to screw over Commoners.\nOption A +10 favor to Gilded and -10 favor to Commoners; Option B -10 favor to Gilded and +10 favor to Commoners.",
@@ -34,7 +36,8 @@ decision_names = [
         [
             ["The Gilded", "favor", -10], 
             ["The Commoners", "favor", 10]
-        ]
+        ],
+        "Commoner scams"
     ],
     [
         "The Commoners want to build shelters for the homeless in place of a new military base.\nOption A +10 favor to Commoners and -10 presence to Iron Guard; Option B -10 favor to Commoners.",
@@ -45,6 +48,7 @@ decision_names = [
         ],
         [
             ["The Commoners", "favor", -10]
-        ]
+        ],
+        "homeless shelters"
     ]
 ]
