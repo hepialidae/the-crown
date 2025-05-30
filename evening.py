@@ -10,5 +10,6 @@ def evening():
     gamestate_tracking.todays_newspaper.print_newspaper()
 
     gamestate_tracking.phase = 1
+    print("\n")
     sleep(3)
     return None
