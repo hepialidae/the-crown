@@ -57,9 +57,7 @@ class ActionArticle(Article):
                 self.headline = random.choice(headlines)
             elif self.define_impact() == "negative":
                 headlines = [
-                    f"{self.stance} celebrates {self.action_id}", 
                     f"Suck it, {self.faction}, because the {self.action_id} is here!", 
-                    f"{self.stance} welcomes {self.action_id}!",
                     f"The Emanator strikes again with the {self.action_id}!"
                 ]
                 self.headline = random.choice(headlines)
