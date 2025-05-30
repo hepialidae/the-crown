@@ -2,7 +2,7 @@
 **Project Description**
 
 This is my Year 9 passion project. I wanted to make a game to apply my coding knowledge.
-This project uses Python (base library) and its Tkinter module for some UI elements - mostly to make it easier to play.
+This project uses Python (base library) and its Random module. There aren't any graphics yet, but we'll fix that soon. ;)
 
 
 **Game Description**
