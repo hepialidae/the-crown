@@ -14,7 +14,7 @@ def morning():
     sleep()
     print(f"{secretary_title}: It is now day {gamestate_tracking.day} of your reign.")
     sleep()
-    requests = rand.randint(1, 2)
+    requests = rand.randint(3, 7)
     print(f"{secretary_title}: You have {requests} requests to review this morning.")
     sleep()
     for i in range(requests):
@@ -36,6 +36,7 @@ def morning():
             else:
                 print(f"\n{secretary_title}: Invalid choice. Please enter A or B.\n")
                 sleep(0.5)
+        show_faction_stats()
     print(f"{secretary_title}: This is the end of the morning phase.")
     gamestate_tracking.phase = 2
     sleep(3)
