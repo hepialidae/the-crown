@@ -31,11 +31,10 @@ def afternoon():
             sleep()
             buildable = find_buildable_buildings()
             print(f"\n{secretary_title}: You can build the following buildings: {buildable}.")
-            lower_buildable = buildable.lower()
             building_choice = None
-            while building_choice == None or building_choice not in lower_buildable:
+            while building_choice == None or building_choice not in buildable.lower():
                 building_choice = input(f"{secretary_title}: Which building would you like to build? ").lower().strip()
-                if building_choice not in lower_buildable:
+                if building_choice not in buildable.lower() or building_choice == None:
                     print(f"\n{secretary_title}: You can only build the following buildings: {buildable}.")
                     sleep()
             appropriate_choice = False
@@ -60,6 +59,7 @@ def afternoon():
                 except ValueError:
                     print(f"\n{secretary_title}: Please make sure the coordinates entered are in the right format.")
                     sleep(0.5)
+                    appropriate_choice = False
         elif choice == "2":
             appropriate_interaction_choice = False
             while appropriate_interaction_choice == False:
