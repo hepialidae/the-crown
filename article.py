@@ -19,7 +19,7 @@ class Article():
             elif self.mod < 1: # negative mod
                 return "negative"
         else:
-            raise Exception("Impact could not be defined") # for edge cases (which shouldn't happen really)
+            raise Exception("Impact could not be defined") # for edge cases
 
 
 class ActionArticle(Article):
