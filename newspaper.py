@@ -34,6 +34,7 @@ class Newspaper():
         self.add_article(article, "state of the city")
     
     def print_newspaper(self):
+        print("\n")
         for i in range(3):
             article = random.choice(self.action_articles)
             self.action_articles.remove(article)
@@ -41,3 +42,6 @@ class Newspaper():
         print("CONTENTS: ")
         for j in range(len(self.final_articles)):
             print(f"{j + 1}. {self.final_articles[j].headline}")
+    
+    def delete_article(self, article_num): # article_num should be index of article in final_articles
+        del self.final_articles[article_num]
