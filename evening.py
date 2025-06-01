@@ -36,5 +36,3 @@ def evening():
     print("\n")
     sleep(3)
     return None
-
-evening()
