@@ -15,6 +15,8 @@ def evening():
     choice = ""
     while choice.lower() != "exit" or choice.lower() != "q":
         print(f"{secretary_title}: Enter '1' to delete an article.")
+        print(f"{secretary_title}: Enter '2' to edit an existing article.")
+        print(f"{secretary_title}: Enter '3' to add an article.")
         print(f"{secretary_title}: Enter 'exit' to exit this phase.")
         choice = input(f"{secretary_title}: What would you like to do? ")
         if choice == "1":
@@ -30,7 +32,13 @@ def evening():
                     appropriate = False
             gamestate_tracking.todays_newspaper.delete_article(article - 1)
             sleep(0.3)
-            print(f"{secretary_title}: Alright, I'll tell them to delete that article.")
+            print(f"{secretary_title}: Understood. I'll tell them to delete that article.")
+        elif choice == "2":
+            pass
+        elif choice == "3":
+            pass
+        else:
+            print(f"{secretary_title}: Please enter an appropriate option.\n")
 
     gamestate_tracking.phase = 1
     print("\n")
