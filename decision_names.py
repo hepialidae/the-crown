@@ -1,3 +1,5 @@
+from may_change import advisor_names
+
 decision_names = [
     [
         "The Arcanum asks to be permitted to research battle magic.\nOption A: Give them the permit. (+10 to Arcanum and -10 to Veiled)\nOption B: Reject them. (-10 to Arcanum)",
@@ -9,7 +11,14 @@ decision_names = [
         [
             ["The Arcanum", "favor", -10] 
         ],
-        "battle magic research permit"
+        "battle magic research permit",
+        {
+            advisor_names[0]: f"Your Eminence, the research is a great idea. Not only will we be able to advance the study of magic, we will also be able to conquer cities and gain influence throughout the land. I highly encourage you to permit the research.",
+            advisor_names[1]: f"Your Eminence, this matter does not concern me, but it would be in your best interest to ensure the citizens are not harmed by this new magic.",
+            advisor_names[2]: f"Well, well, well. I've listened to the {advisor_names[0]}, and the conquering cities part sounds extremely intriguing. Let's permit it and see what happens, shall we?",
+            advisor_names[3]: f"Your Eminence, battle magic would greatly strengthen our city's defenses. Allow the research.",
+            advisor_names[4]: f"Your Eminence! This is a terrible idea. Nearby cities will treat the research permit as a declaration of war, and then where will our hard-earned peace treaties go?"
+        }
     ],
     [
         "The Commander of the Iron Guard requests more military bases around the city.\nOption A: Build military bases. (+10 presence to Iron Guard and +5 suspicion to all other factions)\nOption B: Reject them. (-10 favor to Iron Guard)",
