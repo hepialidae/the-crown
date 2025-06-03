@@ -48,6 +48,6 @@ class Decision():
     
     def discuss_with_advisor(self, advisor): # advisor should be the NAME
         if self.advice == None:
-            print(f"{secretary_title}: The {advisor} doesn't seem to have much to say.")
+            print(f"\n{secretary_title}: The {advisor} doesn't seem to have much to say.")
         else:
             print(f"{advisor}: {self.advice[advisor]}")
