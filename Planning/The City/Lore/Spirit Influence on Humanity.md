@@ -1,0 +1,1 @@
+All humans are ruled by the 6 spirits, but in most humans, the influence of one spirit is stronger than all the rest. They will join their faction accordingly. For example, fire-ruled people will join the Arcanum. However, once the current Emanator starts to get old, a new Emanator - aether-ruled - will be born. They will grow up to rule the city.

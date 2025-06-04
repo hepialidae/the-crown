@@ -1,0 +1,2 @@
+The morning phase takes place in the Throne Room.
+Inside, the Emanator is surrounded by his **advisors** - one from each faction - and his **secretary**. During the phase, the secretary reads out requests from citizens. The Emanator can choose whether to accept the request or not. If he accepts it, there may be immediate consequences, or he may have to act on the request in The Afternoon Phase.

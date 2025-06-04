@@ -1,0 +1,3 @@
+Ever since the universe was created, the 5 central spirits - Fire, Water, Air, Earth, and Metal - have been in conflict. That was until "The Dawn", when the spirit of Aether (Light) was born. 
+
+The spirit of Aether guided the central spirits to create humanity: Earth created land for humans to stand on, Air created the atmosphere for humans to breathe, Water created streams and oceans for humans to drink from, Fire gave light for humans to see, and Metal formed tools for humans to use. Finally, Aether gave the humans a soul, and they formed the first city - **the city in which the game takes place**.
